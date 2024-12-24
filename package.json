@@ -1,6 +1,6 @@
 {
   "name": "@megaorm/logger",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "This package is designed for managing log files, with support for logging messages, retrieving entries, filtering by date, and more.",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -18,7 +18,7 @@
   },
   "scripts": {
     "test": "npx jest --coverage",
-    "build": "tsc --watch"
+    "build": "tsc"
   },
   "keywords": [
     "megaorm-logger",
@@ -26,19 +26,8 @@
     "logger",
     "logging",
     "log-file",
-    "log-management",
-    "file-logging",
-    "log-entries",
-    "log-filtering",
     "log-utility",
     "logging-tool",
-    "nodejs",
-    "typescript",
-    "log-handler",
-    "log-storage",
-    "debugging",
-    "logging-package",
-    "log-clearing",
-    "log-processing"
+    "logging-package"
   ]
 }
