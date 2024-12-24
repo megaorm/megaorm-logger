@@ -1,14 +1,6 @@
 import { appendFile, readFile, writeFile } from 'fs/promises';
 
 /**
- * Get the current UTC Date and Time
- * @returns Date and Time string
- */
-export function getDateTime(): string {
-  return new Date().toISOString().slice(0, 19).replace('T', ' ');
-}
-
-/**
  * Error class for logger-related issues.
  */
 export class LoggerError extends Error {}
@@ -193,7 +185,8 @@ export class Logger {
         );
       }
 
-      appendFile(this.path, `<-- LOG -->\n[${getDateTime()}] ${message}\n\n`)
+      const date = new Date().toISOString().slice(0, 19).replace('T', ' ');
+      appendFile(this.path, `<-- LOG -->\n[${date}] ${message}\n\n`)
         .then(() => resolve())
         .catch((error) => reject(new LoggerError(error.message)));
     });
